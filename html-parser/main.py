@@ -1,6 +1,7 @@
-from utils.get_linked_scripts_url import get_linked_scripts_url
-from utils.get_linked_css import get_linked_css_url
+from src.HtmlParser import HtmlParser
 
-html = get_linked_css_url("https://hashable.space")
+htmlparser = HtmlParser("https://hashable.space")
 
-print(html)
+print(htmlparser.find_linked_css_count())
+
+print(htmlparser.find_linked_scripts_url())
