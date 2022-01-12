@@ -1,3 +1,6 @@
+run:
+	python3 html-parser/main.py
+
 init_venv:
 	python3 -m venv venv
 
@@ -9,6 +12,3 @@ create_package_list:
 
 install:
 	pip3 install -r requirements.txt
-
-run:
-	python3 html-parser/main.py
