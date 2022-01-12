@@ -7,7 +7,7 @@ init_venv:
 activate:
 	source venv/bin/activate
 
-create_package_list:
+update_packages:
 	pip3 freeze > requirements.txt
 
 install:
