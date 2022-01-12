@@ -1,5 +1,5 @@
-from utils.get_raw_html import get_raw_html
+from utils.get_linked_scripts_url import get_linked_scripts_url
 
-html = get_raw_html("https://hashable.space")
+html = get_linked_scripts_url("https://hashable.space")
 
 print(html)
