@@ -4,9 +4,7 @@ from src.find_source_script import find_source_script
 from src.find_source_css import find_source_css
 from src.relative_path import relative_path
 
-req = requests.get("https://apple.com")
-
-htmlparser = HtmlParser(req.content.decode("utf-8"))
+htmlparser = HtmlParser("https://apple.com")
 
 stylesheet = htmlparser.find_linked_css_urls()
 
