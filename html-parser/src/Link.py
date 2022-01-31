@@ -1,3 +1,3 @@
 class Link:
-    url: str
+    sourceURL: str
     otherArgs: list(str)

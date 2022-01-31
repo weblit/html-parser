@@ -1,3 +1,3 @@
 class Script:
-    url: str
-    otherArguments: list(str)
+    sourceURL: str
+    otherArguments: list
