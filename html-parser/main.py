@@ -1,6 +1,7 @@
 from src.HtmlParser import HtmlParser
 from src.find_source_script import find_source_script
 from src.find_source_css import find_source_css
+from src.relative_path import relative_path
 
 htmlparser = HtmlParser("./html-parser/tests/index.html")
 
@@ -12,4 +13,5 @@ for script in scripts:
     print(find_source_script(script))
 
 for css in stylesheet:
-    print(find_source_css(css))
+    source = find_source_css(css)
+    print("Relative path", relative_path(source, "apple.com"))
