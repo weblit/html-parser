@@ -1,4 +1,4 @@
-from htmlparser.helpers.clean_attributes import clean_attributes
+from helpers.clean_attributes import clean_attributes
 from utils.get_linked_css_url import get_linked_css_url
 from utils.get_linked_scripts_url import get_linked_scripts_url
 from src.find_source_css import find_source_css
