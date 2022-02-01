@@ -1,4 +1,3 @@
-import requests
 from src.HtmlParser import HtmlParser
 from src.find_source_script import find_source_script
 from src.find_source_css import find_source_css
