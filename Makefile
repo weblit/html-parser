@@ -1,5 +1,5 @@
 run:
-	python3 html-parser/main.py
+	python3 htmlparser/main.py
 
 init_venv:
 	python3 -m venv venv
