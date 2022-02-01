@@ -7,4 +7,7 @@ if `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel
 import re
 
 def clean_attributes(input: str):
-    return re.findall(r'(.*.css|.*.js)', input)
+    try:
+        return re.findall(r'(.*.css|.*.jsx|.*.js)', input)[0]
+    except IndexError:
+        return ""

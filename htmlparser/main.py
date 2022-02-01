@@ -1,6 +1,6 @@
 from src.HtmlParser import HtmlParser
 
-htmlparser = HtmlParser("http://localhost:3000/")
+htmlparser = HtmlParser("https://apple.com")
 
 css = htmlparser.get_css_paths()
 js = htmlparser.get_js_paths()
