@@ -1,5 +1,3 @@
-import re
-
 """ 
 Checks for relative path and if present fixes them to a parent url
 """
