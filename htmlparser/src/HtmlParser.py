@@ -21,7 +21,7 @@ class HtmlParser:
     def find_linked_scripts_count(self) -> int:
         return len(get_linked_scripts_url(self.url))
 
-    def get_css_paths(self) -> list(str):
+    def get_css_paths(self):
         result = []
         css = self.find_linked_css_urls()
         for stylesheet in css:
@@ -31,7 +31,7 @@ class HtmlParser:
 
         return result
 
-    def get_js_paths(self) -> list(str):
+    def get_js_paths(self):
         result = []
         js = self.find_linked_scripts_url()
 
