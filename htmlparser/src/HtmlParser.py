@@ -25,9 +25,11 @@ class HtmlParser:
         result = []
         css = self.find_linked_css_urls()
         for stylesheet in css:
-            source = find_source_css(stylesheet)
+            source = relative_path(
+                clean_attributes(find_source_css(stylesheet)), self.url)
 
-            result.append(relative_path(clean_attributes(source), self.url))
+            if source != "":
+                result.append(source)
 
         return result
 
@@ -36,8 +38,10 @@ class HtmlParser:
         js = self.find_linked_scripts_url()
 
         for script in js:
-            source = find_source_script(script)
+            source = relative_path(
+                clean_attributes(find_source_script(script)), self.url)
 
-            result.append(relative_path(clean_attributes(source), self.url))
+            if source != "":
+                result.append(source)
 
         return result
