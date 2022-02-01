@@ -22,13 +22,22 @@ class HtmlParser:
         return len(get_linked_scripts_url(self.url))
 
     def get_css_paths(self) -> list(str):
+        result = []
         css = self.find_linked_css_urls()
-        source = find_source_css(css)
+        for stylesheet in css:
+            source = find_source_css(stylesheet)
 
-        return relative_path(clean_attributes(source), self.url)
+            result.append(relative_path(clean_attributes(source), self.url))
+
+        return result
 
     def get_js_paths(self) -> list(str):
-        css = self.find_linked_scripts_url()
-        source = find_source_script(css)
+        result = []
+        js = self.find_linked_scripts_url()
 
-        return relative_path(clean_attributes(source), self.url)
+        for script in js:
+            source = find_source_script(script)
+
+            result.append(relative_path(clean_attributes(source), self.url))
+
+        return result
